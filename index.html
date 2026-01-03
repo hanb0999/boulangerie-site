@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulangerie HAL</title>
+    <link rel="icon" type="image/png" href="images/logo-sticky.svg">
+    <link rel="apple-touch-icon" href="images/logo-sticky.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="hero-nav">
+            <div class="logo">
+                <img src="images/logo-hero.svg" alt="Hero Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="roll-link">ABOUT</a></li>
+                <li><a href="#news" class="roll-link">NEWS</a></li>
+                <li><a href="#menu" class="roll-link">MENU</a></li>
+                <li><a href="#address" class="roll-link">ADDRESS</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('images/hero1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero2.jpg')"></div>
+            <div class="slide" style="background-image: url('images/hero3.jpg')"></div>
+            <div class="slide" style="background-image: url('images/hero4.jpg')"></div>
+            <div class="slide" style="background-image: url('images/hero5.jpg')"></div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="v-text">
+                <span>S</span>
+                <span>C</span>
+                <span>R</span>
+                <span>O</span>
+                <span>L</span>
+                <span>L</span>
+            </span>
+            <div class="v-line"></div>
+        </div>
+    </header>
+
+    <nav class="global-nav" id="sticky-nav">
+        <div class="nav-container">
+            <div class="side-links left">
+                <a href="#about" class="roll-link">ABOUT</a>
+                <a href="#news" class="roll-link">NEWS</a>
+            </div>
+            <div class="center-logo">
+                <a href="#" class="back-to-top">
+                    <img src="images/logo-sticky.svg" alt="HAL Logo">
+                </a>
+            </div>
+            <div class="side-links right">
+                <a href="#menu" class="roll-link">MENU</a>
+                <a href="#address" class="roll-link">ADDRESS</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-row top-row">
+                <div class="about-image-wrapper large-img bottom-right-round">
+                    <img src="images/about1.jpg" alt="Boulangerie Exterior">
+                </div>
+                <div class="about-text-content">
+                    <p class="v-jp-text">
+                        毎日食べるもの<br>
+                        だからこそ、<br>
+                        シンプルで<br>
+                        あること。<br>
+                        <br>
+                        素材の味が<br>
+                        きちんと伝わること。
+                    </p>
+                    <div class="about-icon1 floating-pastry">
+                        <img src="images/escargot.png" alt="Pastry Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="about-row bottom-row">
+                <div class="about-text-content">
+                    <p class="v-jp-text long-text">
+                        私たちは<br>
+                        フランスの伝統製法を<br>
+                        大切にしながら、<br>
+                        日本の食卓に<br>
+                        自然になじむパンを<br>
+                        焼いています。<br>
+                        <br>
+                        朝の一枚から、<br>
+                        食事の主役まで。<br>
+                        <br>
+                        日常の中で、<br>
+                        ふと思い出して<br>
+                        もらえるパン屋で<br>
+                        ありたいと<br>
+                        考えています。
+                    </p>
+                    <div class="about-icon2 floating-bread">
+                        <img src="images/boule-bread.png" alt="Bread Icon">
+                    </div>
+                </div>
+                <div class="about-image-wrapper medium-img all-round">
+                    <img src="images/about2.jpg" alt="Bakery Interior">
+                </div>
+            </div>
+            <div class="about-title-container">
+                <div class="about-title-wrapper">
+                    <h2 class="about-title">ABOUT US</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bread-slider-section">
+        <div class="slider-wrapper">
+            <button class="slider-arrow prev" id="bread-prev">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="bread-track-container">
+                <div class="bread-track" id="bread-track">
+                    <img src="images/bread1.jpg" alt="Bread">
+                    <img src="images/bread2.jpg" alt="Bread">
+                    <img src="images/bread3.jpg" alt="Bread">
+                    <img src="images/bread4.jpg" alt="Bread">
+                </div>
+            </div>
+            <button class="slider-arrow next" id="bread-next">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+    
+    <section id="news" class="news-section">
+        <div class="news-container">
+            <div class="news-header">
+                <h2 class="news-title">NEWS</h2>
+            </div>
+
+            <div class="news-main-content">
+                <div class="news-image-area">
+                    <div class="news-circle-frame">
+                        <img src="images/news-img.jpg" alt="Sweet Pastries">
+                    </div>
+                </div>
+
+                <div class="news-list">
+                    <a href="#" onclick="event.preventDefault()" class="news-item">
+                        <div class="news-date">2022<br>11-30</div>
+                        <div class="news-body">
+                            <p>フランス・オーベルニュ地方の伝統パンや郷土料理の惣菜パンなどを販売するオーベルニュ地方フェアを開催いたします。</p>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="event.preventDefault()" class="news-item">
+                        <div class="news-date">2022<br>11-16</div>
+                        <div class="news-body">
+                            <p>ご好評いただいております、デザートに、季節限定でオレンジを使用したデザートが加わります。</p>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="event.preventDefault()" class="news-item">
+                        <div class="news-date">2022<br>11-08</div>
+                        <div class="news-body">
+                            <p>名産ブルーチーズ「フルム・ダンベール」を使ったパンや郷土料理をアレンジした惣菜パンなど、フェア限定商品をご用意しております。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="news-footer">
+                <div class="read-more-wrapper">
+                    <a href="#" onclick="event.preventDefault()" class="read-more roll-link">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-intro-section">
+        <div class="menu-swoop-container">
+            <div class="menu-960-container">
+
+                <div class="bread-row row-right">
+                    <div class="bread-item"><img src="images/croissant.png" alt="Croissant"></div>
+                    <div class="bread-item"><img src="images/pain-au-chocolat.png" alt="Pain Au Chocolate"></div>
+                    <div class="bread-item"><img src="images/cranberry.png" alt="Cranberry Escargot"></div>
+                    <div class="bread-item"><img src="images/sourdough.png" alt="Sourdough"></div>
+                </div>
+
+                <div class="bread-row row-left">
+                    <div class="bread-item"><img src="images/sourdough.png" alt="Sourdough"></div>
+                    <div class="bread-item"><img src="images/cranberry.png" alt="Cranberry Escargot"></div>
+                    <div class="bread-item"><img src="images/pain-au-chocolat.png" alt="Pain Au Chocolate"></div>
+                    <div class="bread-item"><img src="images/croissant.png" alt="Croissant"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-grid-section">
+        <div class="menu-grid-container">
+            <div class="menu-grid-header">
+                <h2 class="menu-grid-title">MENU</h2>
+                <div class="menu-grid-subtitle">
+                    <p class="subtitle-large">香り、食感、味わい。</p>
+                    <p class="subtitle-small">毎日食べたくなるパンを揃えています。</p>
+                </div>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/croissant.png" class="bread-img" alt="Croissant">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">発酵バターのクロワッサン</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">280</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/pain-au-chocolat.png" class="bread-img" alt="Pain Au Chocolate">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">パン・オ・ショコラ</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">320</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/cranberry.png" class="bread-img" alt="Cranberry Escargot">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">クランベリーのエスカルゴ</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">360</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/menu-baguette.png" class="bread-img" id="size" alt="Baguette">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">バゲット・トラディション</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">300</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/sourdough.png" class="bread-img" alt="Sourdough">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">パン・オ・ルヴァン</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">780</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/sandwich.png" class="bread-img" id="size" alt="Ham Sandwich">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">ハムサンドイッチ</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">580</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/menu-crown.png" class="bread-img" id="size" alt="Boule Bread Loaf">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">クーロンヌ・ボルドレーズ</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">720</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/custard.png" class="bread-img" id="size" alt="Custard Twist">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">自家製カスタードのツイスト</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">280</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="stamp-frame">
+                        <img src="images/frame.png" class="frame-bg" alt="frame">
+                        <img src="images/menu-chocochip.png" class="bread-img" id="size" alt="Chocolate Chip Baguette">
+                    </div>
+                    <div class="menu-info">
+                        <span class="jp-name">チョコチップ入りバゲット</span>
+                        <span class="price">
+                            <span class="currency">¥</span>
+                            <span class="amount">420</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-footer">
+                <div class="view-more-wrapper">
+                    <a href="#" onclick="event.preventDefault()" class="view-more roll-link">
+                        view more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="address" class="address-section">
+        <div class="address-swoop-container">
+            <div class="address-960-container">
+
+                <div class="address-header">
+                    <div class="address-title-wrapper">
+                        <h2 class="address-title">ADDRESS</h2>
+                    </div>
+                </div>
+
+                <div class="address-main-content">
+                    <div class="address-slideshow">
+                        <div class="address-slide active">
+                            <img src="images/shop-1.jpg" alt="Shop Exterior">
+                        </div>
+                        <div class="address-slide">
+                            <img src="images/shop-2.jpg" alt="Shop Interior 1">
+                        </div>
+                        <div class="address-slide">
+                            <img src="images/shop-3.jpg" alt="Shop Interior 2">
+                        </div>
+                        <div class="address-slide">
+                            <img src="images/shop-4.jpg" alt="Bread">
+                        </div>
+                        <div class="address-slide">
+                            <img src="images/shop-5.jpg" alt="Bread">
+                        </div>
+                        <div class="address-slide">
+                            <img src="images/shop-6.jpg" alt="Bread">
+                        </div>
+                    </div>
+
+                    <div class="address-info">
+                        <div class="address-logo">
+                            <img src="images/logo-sticky.svg" alt="HAL Boulangerie Logo" class="info-logo-img">
+                        </div>
+
+                        <div class="address-details">
+                            <span class="jp-address">
+                                <span class="address-line-1">
+                                    <span class="postcode">〒</span>
+                                    <span class="address">150-0033東京都</span>
+                                </span>
+                                <span class="address2">渋谷区猿楽町29-18</span>
+                            </span>
+                            <div class="time-tel">
+                                <p><span>OPEN</span>10:00～20:00</p>
+                                <p><span>TEL</span>03-3344-1010</p>
+                            </div>
+                            <p class="extra-info">
+                                東急東横線［代官山駅］徒歩3分<br>
+                                東急東横線・地下鉄日比谷線［中目黒駅］徒歩7分<br>
+                                JR山手線・JR埼京線・地下鉄日比谷線［恵比寿駅］徒歩10分
+                            </p>
+                        </div>
+
+                        <div class="google-map-link-wrapper">
+                            <a href="#map" class="google-map-link roll-link">google map</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="map" class="map-embed-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1621.0908729024638!2d139.69964074330827!3d35.64789358540413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b45f5311ed1%3A0x12987f54caa1ee65!2z44CSMTUwLTAwMzMg5p2x5Lqs6YO95riL6LC35Yy654y_5qW955S677yS77yZ4oiS77yR77yY!5e0!3m2!1sja!2sjp!4v1433666443406" width="100%" height="450" style="border:0; filter: grayscale(1) invert(0.9);" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="copyright"><span class="symbol">©</span> 2026 Boulangerie HAL. All Rights Reserved</p>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="back-to-top roll-link">back to top</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
