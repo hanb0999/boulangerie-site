@@ -54,6 +54,95 @@ html, body {
   font-display: swap;
 }
 
+/* LOADER */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+.loader-panel {
+    position: absolute;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background-color: #F7F1EA;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1;
+}
+.loader-panel.left { 
+    left: 0; 
+}
+.loader-panel.right { 
+    right: 0; 
+}
+.loader-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.loader-logo {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: revealLogo 1.2s forwards ease-out;
+}
+.loader-line-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+.loader-line {
+    width: 0%;
+    height: 1px;
+    background: #1a1a1a;
+    transition: width 0.1s linear;
+}
+#load-percentage {
+    font-family: 'Hare', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    margin-top: 12px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 0.6s;
+}
+@keyframes growLineToFull {
+    to { width: 100%; }
+}
+@keyframes revealLogo { 
+    to { opacity: 1; transform: translateY(0); } 
+}
+@keyframes fadeIn { 
+    to { opacity: 1; } 
+}
+body.loaded .loader-panel.left { 
+    transform: translateX(-100%); 
+}
+body.loaded .loader-panel.right { 
+    transform: translateX(100%); 
+}
+body.loaded .loader-content { 
+    opacity: 0; 
+    transform: translateY(-20px); 
+}
+body:not(.loaded) {
+    overflow: hidden;
+}
+
 /* HERO SLIDE*/
 .hero-section {
     position: relative;
@@ -83,6 +172,7 @@ html, body {
 .slide.active {
     opacity: 1; 
 }
+
 /* HERO NAV */
 .hero-nav {
     position: absolute;
