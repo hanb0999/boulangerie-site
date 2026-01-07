@@ -1,3 +1,41 @@
+// LOADER
+window.addEventListener('DOMContentLoaded', function() {
+    const percentDisplay = document.getElementById('load-percentage');
+    const loaderLine = document.querySelector('.loader-line');
+    let currentPercent = 0;
+    
+    const progressInterval = setInterval(() => {
+        if (currentPercent < 85) {
+            currentPercent += Math.floor(Math.random() * 3) + 1;
+        } else if (currentPercent < 99) {
+            currentPercent += 0.2;
+        }
+
+        if (percentDisplay) {
+            percentDisplay.textContent = Math.floor(currentPercent);
+        }
+        if (loaderLine) {
+            loaderLine.style.width = Math.floor(currentPercent) + "%";
+        }
+    }, 50);
+
+    window.addEventListener('load', function() {
+        clearInterval(progressInterval);
+        
+        if (percentDisplay) percentDisplay.textContent = "100";
+        if (loaderLine) loaderLine.style.width = "100%";
+
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+            
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                if (loader) loader.style.display = 'none';
+            }, 1200);
+        }, 500);
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // NAVIGATION
     window.addEventListener('scroll', function() {
